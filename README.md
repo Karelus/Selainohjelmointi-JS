@@ -1,2 +1,2 @@
 # Selainohjelmointi-JS
-This is a  repository for javascript browser programming - course.
+This is a  repository for javascript browser programming course.

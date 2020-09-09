@@ -3,7 +3,7 @@ let book1 = {
     isbn: 'G554AF23',
     authors: ['Dan Brown'],
     name: 'Kadonnut symboli',
-    publicationDate: new Date('15-09-2020'),
+    publicationDate: new Date('15-09-2009'),
 
     getIsbn: function () {
         return this.isbn;
@@ -24,14 +24,14 @@ let book2 = {
     isbn: 'G554AF23',
     authors: ['Dan Brown'],
     name: 'Murtamaton linnake',
-    publicationDate: new Date('15-09-2020')
+    publicationDate: new Date('01-01-1998')
 }
 
 let book3 = {
     isbn: 'GR543TY7',
     authors: ['Dan Brown'],
     name: 'Murtamaton Linnake',
-    publicationDate: new Date('15-09-2020')
+    publicationDate: new Date('01-01-1998')
 }
 
 console.log(checkBooks(book2, book3));

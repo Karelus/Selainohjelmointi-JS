@@ -42,7 +42,20 @@ function checkBooks(book1, book2) {
 }
 
 // Compare two books to find out if they have same identity
+// when they have identical values
+let book4 = {
+    isbn: 'U753SW0',
+    authors: ['Dan Brown'],
+    name: 'Da Vinci -koodi',
+    publicationDate: new Date('18-03-2003')
+}
 
+let book5 = {
+    isbn: 'U753SW0',
+    authors: ['Dan Brown'],
+    name: 'Da Vinci -koodi',
+    publicationDate: new Date('18-03-2003')
+}
 
 
 // CODED WITH TEACHER

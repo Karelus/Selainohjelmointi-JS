@@ -27,11 +27,20 @@ let book2 = {
 }
 
 let book3 = {
-    isbn: 'G53DER3',
+    isbn: 'GR543TY7',
     authors: ['Dan Brown'],
     name: 'Murtamaton Linnake',
     publicationDate: new Date('15-09-2020')
 }
+
+console.log(checkBooks(book2, book3));
+
+function checkBooks(book1, book2) {
+    if (book1.isbn == book2.isbn) return true;
+    else return false;
+}
+
+
 
 /*
 // Luetaan olion tietojäsenten arvoja. 2 eri tapaa.

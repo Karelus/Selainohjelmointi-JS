@@ -19,6 +19,7 @@ let book1 = {
     }
 };
 
+// Check if 2 books are the same considering their isbn numbers
 let book2 = {
     isbn: 'G554AF23',
     authors: ['Dan Brown'],
@@ -40,8 +41,11 @@ function checkBooks(book1, book2) {
     else return false;
 }
 
+// Compare two books to find out if they have same identity
 
 
+
+// CODED WITH TEACHER
 /*
 // Luetaan olion tietojäsenten arvoja. 2 eri tapaa.
 console.log(book2.name);

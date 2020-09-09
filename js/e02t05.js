@@ -57,6 +57,15 @@ let book5 = {
     publicationDate: new Date('18-03-2003')
 }
 
+console.log(checkIdentity(book4, book5));
+
+function checkIdentity(book1, book2) {
+    if (book1 === book2) return true;
+    else return false;
+}
+
+let book6 = book4;
+console.log(checkIdentity(book4, book6));
 
 // CODED WITH TEACHER
 /*

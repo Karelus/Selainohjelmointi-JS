@@ -1,4 +1,4 @@
-let measurements = [{batcid: 434, unit: "ounce", weight: 23.11}, 
+let measurements = [{batchid: 434, unit: "ounce", weight: 23.11}, 
 {batchid: 434, unit: "gram", weight: 122.54}, {batchid: 522, unit: "ounce", weight: 5.88}];
 
 measurements = convertOuncesToGrams(measurements);

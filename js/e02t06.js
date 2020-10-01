@@ -13,7 +13,7 @@ function convertOuncesToGrams(measurements) {
     for (let i = 0; i < measurements.length; i++) {
         if (measurements[i]["unit"] == "ounce") {
             measurements[i]["weight"] *= 28.34952;
-            measurements[i]["unit"] == "gram"; // doesnt replace for some reason
+            measurements[i]["unit"] = "gram";
         }
     }
     return measurements;

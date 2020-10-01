@@ -3,7 +3,7 @@ let book1 = {
     isbn: 'G554AF23',
     authors: ['Dan Brown'],
     name: 'Kadonnut symboli',
-    publicationDate: new Date('15-09-2020'),
+    publicationDate: new Date('15-09-2009'),
 
     getIsbn: function () {
         return this.isbn;
@@ -19,20 +19,55 @@ let book1 = {
     }
 };
 
+// Check if 2 books are the same considering their isbn numbers
 let book2 = {
     isbn: 'G554AF23',
     authors: ['Dan Brown'],
     name: 'Murtamaton linnake',
-    publicationDate: new Date('15-09-2020')
+    publicationDate: new Date('01-01-1998')
 }
 
 let book3 = {
-    isbn: 'G53DER3',
+    isbn: 'GR543TY7',
     authors: ['Dan Brown'],
     name: 'Murtamaton Linnake',
-    publicationDate: new Date('15-09-2020')
+    publicationDate: new Date('01-01-1998')
 }
 
+console.log(checkBooks(book2, book3));
+
+function checkBooks(book1, book2) {
+    if (book1.isbn == book2.isbn) return true;
+    else return false;
+}
+
+// Compare two books to find out if they have same identity
+// when they have identical values
+let book4 = {
+    isbn: 'U753SW0',
+    authors: ['Dan Brown'],
+    name: 'Da Vinci -koodi',
+    publicationDate: new Date('18-03-2003')
+}
+
+let book5 = {
+    isbn: 'U753SW0',
+    authors: ['Dan Brown'],
+    name: 'Da Vinci -koodi',
+    publicationDate: new Date('18-03-2003')
+}
+
+console.log(checkIdentity(book4, book5));
+
+function checkIdentity(book1, book2) {
+    if (book1 === book2) return true;
+    else return false;
+}
+
+let book6 = book4;
+console.log(checkIdentity(book4, book6));
+
+// CODED WITH TEACHER
 /*
 // Luetaan olion tietojäsenten arvoja. 2 eri tapaa.
 console.log(book2.name);

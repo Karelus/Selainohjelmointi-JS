@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Threats with React</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+</head>
+
+<body>
+
+<div id="react-root"></div>
+
+<script>
+
+const threats = React.createElement(
+    'section',
+    { 'id': 'threats'},
+    React.createElement('h2', null, 'SQL Injection Types'),
+    React.createElement('ul', null,
+        React.createElement('li', { className : 'single-threat'}, 'String Injection'),
+        React.createElement('li', { className : 'single-threat'}, 'Numeric Injection'),
+        React.createElement('li', { className : 'single-threat'}, 'Blind Injection') 
+    )
+);
+
+ReactDOM.render(threats, document.getElementById('react-root'));
+
+</script>
+</body>
+
+</html>

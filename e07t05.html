@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Component</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+</head>
+
+<body>
+
+    <div id="react-root"></div>
+
+    <script>
+
+        const sqlThreats = ['String Injection', 'Numeric Injection', 'Blind Injection'];
+
+        function ThreatList() {
+            return React.createElement(
+                "ul",
+                { className: "sqlthreats" },
+                sqlThreats.map((threat, i) =>
+                    React.createElement("li", { key : i }, threat)
+                )
+            );
+        }
+
+        ReactDOM.render(
+            React.createElement(ThreatList, { threats: sqlThreats }, null),
+            document.getElementById('react-root')      
+            );
+
+    </script>
+    
+</body>
+
+</html>

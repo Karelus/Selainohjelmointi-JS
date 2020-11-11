@@ -1,4 +1,4 @@
-import {setPriceList, getPrice} from "/PriceList.js";
+import {setPriceList, getPrice} from "./PriceList.js";
 
 let priceList = [   
     {

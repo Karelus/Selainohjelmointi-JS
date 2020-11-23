@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSX</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+
+    <script type="text/babel">
+
+        const data = [
+            {
+                "name": "Painting walls",
+                "tools": [
+                    "Brushes",
+                    "Masking Tape",
+                    "Paint bucket"
+                ],
+                "steps": [
+                    "Remove old paint",
+                    "Fill holes and tracks with filler",
+                    "Paint",
+                    "Repaint"
+                ]
+            },
+            {
+                "name": "Replace wallpaper",
+                "tools": [
+                    "Trowel",
+                    "Glue",
+                    "Knife"
+                ],
+                "steps": [
+                    "Remove old wallpaper with trowel",
+                    "Cut wallpaper with knife",
+                    "Add glue to new wallpaper",
+                    "Strick it into the wall"
+                ]
+            },
+            {
+                "name": "Replace lightbulb",
+                "tools": [
+                    "Lightbulb",
+                    "Ladder"
+                ],
+                "steps": [
+                    "Put ladder under the lamp",
+                    "Remvoe old bulb",
+                    "Put new bulb into the lamp"
+                ]
+            }
+        ];
+
+        const Task = ({ name, tools, steps }) =>
+            <section id={name}>
+                <h2>{name}</h2>
+                <section>
+                <h3>Tools</h3>
+                    {tools.map(
+                        (tool, i) => <p key={i}>{tool}</p>
+                    )}
+                </section>
+                <section>
+                    <h3>Steps</h3>
+                    {steps.map(
+                            (step, i) => <p key={i}>{step}</p>
+                        )}
+                </section>
+                <p>----------------------------------</p>
+            </section>
+
+        const TaskList = ({ title, renovations }) => {
+            return <article>
+                <header>
+                    <h1>{title}</h1>
+                </header>
+                <div className="renovations">
+                    {renovations.map((renovation, i) => {
+                        return <Task key={i} {...renovation} />
+                    })}
+                </div>
+            </article>
+        }
+
+        ReactDOM.render(
+            <TaskList renovations={data} title="Home Renovations" />,
+            document.getElementById("root")
+        );
+
+    </script>
+
+    <div id="root"></div>
+
+</body>
+
+</html>
